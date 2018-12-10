@@ -19,4 +19,11 @@ public class City {
     public int getCityId(){
         return this.id;
     };
+
+    public String toString() {
+        return "City{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

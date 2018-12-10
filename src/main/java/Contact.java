@@ -1,30 +1,38 @@
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
-
 import javax.persistence.*;
 
 @Entity
-@Table(name="Contact")
 public class Contact {
     @Id
     @GeneratedValue
     private Integer id;
-
     @Column
     private String name;
-
     @Column
     private String phone;
 
     @OneToOne
-    @JoinColumn
-    private int cityId;
+    @JoinColumn(name = "fk_ad_id", referencedColumnName = "id")
+    private City city;
 
     public Contact() {}
 
-    public Contact(String name, String phone, int cityId) {
+    public Contact(String name, String phone, City city) {
         this.name = name;
         this.phone = phone;
-        this.cityId = cityId;
+        this.city = city;
+    }
+
+    public void setCity(City city){
+        this.city = city;
+    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", city=" + city +
+                '}';
     }
 }
