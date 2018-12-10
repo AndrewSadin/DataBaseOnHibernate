@@ -1,0 +1,29 @@
+2018-12-10 14:42:22.444 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-10 14:42:22.460 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-12-10 14:42:22.576 [main] WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-12-10 14:42:22.799 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-10 14:42:22.980 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-12-10 14:42:22.984 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:test;DB_CLOSE_DELAY=-1]
+2018-12-10 14:42:22.984 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {}
+2018-12-10 14:42:22.984 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2018-12-10 14:42:22.987 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-12-10 14:42:23.138 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-12-10 14:42:23.834 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@bdecc21] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-12-10 14:42:23.840 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1d782abe] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-12-10 14:42:23.860 [main] INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@72209d93'
+2018-12-10 14:42:23.872 [main] INFO  DBOnHibernate - add cites and contacts
+2018-12-10 14:42:23.873 [main] INFO  DBOnHibernate - City{id=0, name='Ivanovo'}
+City{id=0, name='Moscow'}
+City{id=0, name='Kineshma'}
+2018-12-10 14:42:23.873 [main] INFO  DBOnHibernate - Contact{id=null, name='Ivan Ivanov', phone='+79102345678', city=City{id=0, name='Ivanovo'}}
+Contact{id=null, name='Petr Petrov', phone='+79209876543', city=City{id=0, name='Moscow'}}
+2018-12-10 14:42:24.018 [main] INFO  DBOnHibernate - loading all contacts
+2018-12-10 14:42:24.035 [main] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-10 14:42:24.156 [main] INFO  DBOnHibernate - Contact{id=4, name='Ivan Ivanov', phone='+79102345678', city=City{id=1, name='Ivanovo'}}
+2018-12-10 14:42:24.156 [main] INFO  DBOnHibernate - Contact{id=5, name='Petr Petrov', phone='+79209876543', city=City{id=2, name='Moscow'}}
+2018-12-10 14:42:24.158 [main] INFO  DBOnHibernate - update second Contact
+2018-12-10 14:42:24.173 [main] INFO  DBOnHibernate - Contact{id=4, name='Ivan Ivanov', phone='+79102345678', city=City{id=1, name='Ivanovo'}}
+2018-12-10 14:42:24.174 [main] INFO  DBOnHibernate - Contact{id=5, name='Petr Petrov', phone='+79209876543', city=City{id=3, name='Kineshma'}}
+2018-12-10 14:42:24.175 [main] INFO  DBOnHibernate - delete first Contact
+2018-12-10 14:42:24.190 [main] INFO  DBOnHibernate - Contact{id=5, name='Petr Petrov', phone='+79209876543', city=City{id=3, name='Kineshma'}}
+2018-12-10 14:42:24.193 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:h2:mem:test;DB_CLOSE_DELAY=-1]
